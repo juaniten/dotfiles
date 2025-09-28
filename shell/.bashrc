@@ -7,5 +7,39 @@ source ~/.local/share/omarchy/default/bash/rc
 # Make an alias for invoking commands you use constantly
 # alias p='python'
 
+# Alias for bootstrapping arch with my dotfiles
 alias bootstrap='ansible-playbook --ask-become-pass -i ~/.ansible-arch/inventory.ini ~/.ansible-arch/bootstrap.yml'
+
+
+
+# ------------- 
+# Doofinder
+# -------------
+
+export XAUTHORITY="$HOME/.Xauthority"
+
+# Base path for Doofinder projects
+DOOFINDER_PATH="/home/juan/Work/doofinder"
+
+# Alias for megascript commands
+alias mega.pr="$DOOFINDER_PATH/dfcommon/bin/megascript run pluginrangers -d"
+alias mega.init="$DOOFINDER_PATH/dfcommon/bin/megascript init"
+alias mega.update="$DOOFINDER_PATH/dfcommon/bin/megascript update"
+alias mega.restoredb="$DOOFINDER_PATH/dfcommon/bin/megascript restoredb"
+alias mega.stop="$DOOFINDER_PATH/dfcommon/bin/megascript stop"
+
+# Alias for frp client
+alias frp="nohup $DOOFINDER_PATH/frp/frpc -c $DOOFINDER_PATH/frp/frpc.toml >/dev/null 2>&1 &"
+
+# Useful docker combo
+boom() {
+  docker compose down -v
+  docker compose up -d "$@"
+  docker compose logs -f "$@"
+}
+
+# Cursor 
+cursor() {
+    (nohup /opt/cursor --no-sandbox "$@" > /dev/null 2>&1 &)
+}
 
