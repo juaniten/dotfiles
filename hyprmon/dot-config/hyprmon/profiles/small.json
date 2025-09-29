@@ -1,5 +1,5 @@
 {
-  "name": "Two Screens",
+  "name": "small",
   "monitors": [
     {
       "Name": "eDP-1",
@@ -8,7 +8,7 @@
       "Hz": 60.003,
       "Scale": 1.5,
       "X": 0,
-      "Y": 1216,
+      "Y": 1184,
       "Active": true,
       "EDIDName": "BOE 0x0984",
       "Modes": [
@@ -44,7 +44,7 @@
       "Scale": 1.5,
       "X": 1280,
       "Y": 0,
-      "Active": true,
+      "Active": false,
       "EDIDName": "BNQ BenQ EL2870U 79L00918SL0",
       "Modes": [
         {
@@ -302,6 +302,6 @@
       "DragOffY": 0
     }
   ],
-  "created_at": "2025-09-29T21:10:57.363729439+02:00",
-  "updated_at": "2025-09-29T21:10:57.363729574+02:00"
+  "created_at": "2025-09-29T23:44:39.999470903+02:00",
+  "updated_at": "2025-09-29T23:44:39.999471107+02:00"
 }

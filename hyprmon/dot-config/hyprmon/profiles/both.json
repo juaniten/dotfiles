@@ -1,5 +1,5 @@
 {
-  "name": "Single Big Screen",
+  "name": "both",
   "monitors": [
     {
       "Name": "eDP-1",
@@ -9,7 +9,7 @@
       "Scale": 1.5,
       "X": 0,
       "Y": 1216,
-      "Active": false,
+      "Active": true,
       "EDIDName": "BOE 0x0984",
       "Modes": [
         {
@@ -302,6 +302,6 @@
       "DragOffY": 0
     }
   ],
-  "created_at": "2025-09-29T21:10:32.41148379+02:00",
-  "updated_at": "2025-09-29T21:10:32.411483845+02:00"
+  "created_at": "2025-09-29T23:44:16.678775979+02:00",
+  "updated_at": "2025-09-29T23:44:16.678776333+02:00"
 }
