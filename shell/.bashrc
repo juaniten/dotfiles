@@ -40,6 +40,11 @@ boom() {
 
 # Cursor 
 cursor() {
-    (nohup /opt/cursor --no-sandbox "$@" > /dev/null 2>&1 &)
+    (nohup /usr/bin/cursor --no-sandbox "$@" > /dev/null 2>&1 &)
 }
+
+# Shell autocompletion for asdf
+. <(asdf completion bash)
+# Add asdf shims directory to path
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
