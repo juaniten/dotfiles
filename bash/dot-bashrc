@@ -29,7 +29,15 @@ alias mega.restoredb="$DOOFINDER_PATH/dfcommon/bin/megascript restoredb"
 alias mega.stop="$DOOFINDER_PATH/dfcommon/bin/megascript stop"
 
 # Alias for frp client
-alias frp="nohup $DOOFINDER_PATH/frp/frpc -c $DOOFINDER_PATH/frp/frpc.toml >/dev/null 2>&1 &"
+# alias frp="nohup $DOOFINDER_PATH/frp/frpc -c $DOOFINDER_PATH/frp/frpc.toml >/dev/null 2>&1 &
+function frp {
+  BASEDIR="$DOOFINDER_PATH/frp"
+  (
+    cd "$BASEDIR" || return 1
+    nohup "$BASEDIR/frpc" -c "$BASEDIR/frpc.toml" >/dev/null 2>&1 &
+  )
+}
+
 
 # Useful docker combo
 boom() {
@@ -45,6 +53,3 @@ cursor() {
 
 # Shell autocompletion for asdf
 . <(asdf completion bash)
-# Add asdf shims directory to path
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-
