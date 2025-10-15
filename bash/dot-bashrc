@@ -40,7 +40,12 @@ mega.update() {
 mega.restoredb() {
   "$DOOFINDER_PATH/dfcommon/bin/megascript" restoredb "$@"
 }
-
+mega.restoredb.us1() {
+  "$DOOFINDER_PATH/dfcommon/bin/megascript" restoredb --zone=us1 "$@"
+}
+mega.restoredb.ap1() {
+  "$DOOFINDER_PATH/dfcommon/bin/megascript" restoredb --zone=ap1 "$@"
+}
 mega.stop() {
   "$DOOFINDER_PATH/dfcommon/bin/megascript" stop "$@"
 }
@@ -65,3 +70,4 @@ boom() {
 cursor() {
     (nohup /usr/bin/cursor --no-sandbox "$@" > /dev/null 2>&1 &)
 }
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
